@@ -5,10 +5,10 @@
 
 function dummy_file_handle = make_dummy_nifty_file(sample_file_handle)
 
-	make_dummy_nifty_file = sample_file_handle;
+	dummy_file_handle = sample_file_handle;
 
-	make_dummy_nifty_file.hdr.dime.dim(2 : 5) = 0; % set dimension of x, y, z, t to zero
-	make_dummy_nifty_file.hdr.dime.pixdim(2 : 5) = 0; % set pixel dimension of x, y, z, t to zero
-	make_dummy_nifty_file.img(:) = 0; % erase all the values in signal matrix
+	dummy_file_handle.hdr.dime.dim(2 : 5) = 0; % set dimension of x, y, z, t to zero
+	dummy_file_handle.hdr.dime.pixdim(2 : 5) = 0; % set pixel dimension of x, y, z, t to zero
+	dummy_file_handle.img(:) = 0; % erase all the values in signal matrix
 
 end
